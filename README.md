@@ -169,7 +169,13 @@ mvn clean spring-boot:run
 
 ## 项目展示
 
-![项目演示](https://img.youtube.com/vi/5FYXyBOWH4g/0.jpg)](https://youtu.be/5FYXyBOWH4g)
+<iframe width="100%" height="500" 
+        src="https://www.youtube.com/embed/5FYXyBOWH4g" 
+        title="RAFCART 电商系统演示" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
 
 ---
 
