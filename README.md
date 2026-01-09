@@ -182,19 +182,25 @@ mvn clean spring-boot:run
 ```
 src/
 ├── main/
-│   ├── java/com/rafcart/store/
-│   │   ├── controller/     # 控制层
-│   │   ├── service/        # 业务层
-|   |   |   ├──Impl/
-│   │   ├── mapper/         # 数据访问层
-│   │   ├── entity/         # 实体类
-│   │   ├── dto/            # 数据传输对象
-│   │   ├── common/         # 通用组件
-│   │   └── StoreApplication.java
+│   ├── java/org/example/store/
+│   │   ├── common/                          # 通用组件（常量、枚举等）
+│   │   |   ├── result/                      # 统一返回结果封装
+│   │   |   ├── util/                        # 工具类
+│   │   ├── config/                          # 配置类
+│   │   ├── controller/                      # 控制层
+│   │   ├── dto/                             # 数据传输对象
+│   │   ├── entity/                          # 实体类
+│   │   ├── interceptor/                     # 拦截器
+│   │   ├── mapper/                          # 数据访问层
+│   │   ├── security/                        # 安全相关
+│   │   ├── service/                         # 业务层
+│   │   │   └── impl/                        # 实现层
+│   │   ├── vo/                              # 视图对象
+│   │   └── StoreApplication.java            # 启动类
 │   └── resources/
-│       ├── static/         # 静态资源
-│       ├── templates/      # 模板文件
-│       ├── mapper/         # XML映射文件
-│       └── application.yml
-└── test/                   # 测试代码
+│       ├── static/                          # 静态资源
+│       ├── templates/                       # 模板文件
+│       ├── mapper/                          # XML映射文件
+│       └── application.yml                  
+└── test/
 ```
