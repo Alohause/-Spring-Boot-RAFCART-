@@ -168,11 +168,8 @@ mvn clean spring-boot:run
 ---
 
 ## 项目展示
-<iframe width="100%" height="400" 
-        src="https://youtube.com/embed/5FYXyBOWHgI" 
-        frameborder="0" 
-        allowfullscreen>
-</iframe>
+
+![项目演示](https://img.youtube.com/vi/5FYXyBOWH4g/0.jpg)](https://youtu.be/5FYXyBOWH4g)
 
 ---
 
