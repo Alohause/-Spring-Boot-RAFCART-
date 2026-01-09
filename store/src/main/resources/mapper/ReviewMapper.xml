@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.store.mapper.ReviewMapper">
+
+    <!-- 查询产品评价聚合 -->
+    <select id="selectAggByProductIds" parameterType="string" resultType="org.example.store.vo.ReviewAggVO">
+        SELECT
+          product_id AS productId,
+          COUNT(*)    AS reviewCount,
+          AVG(rating) AS avgRating
+        FROM review
+        WHERE product_id IN (${ids})
+        GROUP BY product_id
+    </select>
+
+    <!-- 查询我的评价列表 -->
+    <select id="selectMyReviews" parameterType="long" resultType="org.example.store.vo.MyReviewVO">
+        SELECT r.id, r.product_id AS productId, p.name AS productName, p.cover_image AS coverImage,
+               r.rating, r.content, r.created_at AS createdAt
+        FROM review r
+        LEFT JOIN product p ON p.id = r.product_id
+        WHERE r.user_id = #{userId}
+        ORDER BY r.created_at DESC, r.id DESC
+    </select>
+
+</mapper>

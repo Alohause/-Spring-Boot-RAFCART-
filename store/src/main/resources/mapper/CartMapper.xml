@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.store.mapper.CartMapper">
+
+    <!-- 获取购物车详情 -->
+    <select id="selectCartItems" parameterType="long" resultType="org.example.store.vo.CartItemVO">
+        SELECT ci.id, ci.sku_id, ci.quantity,
+               ps.price, ps.stock, ps.sku_code, ps.size, ps.color, ps.product_id,
+               p.name as product_name, p.cover_image
+        FROM cart_item ci
+        LEFT JOIN product_sku ps ON ci.sku_id = ps.id
+        LEFT JOIN product p ON ps.product_id = p.id
+        WHERE ci.cart_id = #{cartId}
+        ORDER BY ci.created_at DESC
+    </select>
+
+</mapper>

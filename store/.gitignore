@@ -1,0 +1,167 @@
+# ============================================
+# Maven 编译输出
+# ============================================
+target/
+build/
+*.class
+*.jar
+*.war
+*.ear
+
+# ============================================
+# IntelliJ IDEA 配置文件
+# ============================================
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+out/
+production/
+
+# IDEA 数据文件
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/shelf/
+.idea/tasks.xml
+.idea/workspace.xml
+
+# ============================================
+# 其他 IDE 配置文件
+# ============================================
+# VS Code
+.vscode/
+!.vscode/settings.json.example  # 可以提交示例配置
+!.vscode/tasks.json.example
+!.vscode/launch.json.example
+!.vscode/extensions.json.example
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# NetBeans
+nbproject/
+nbdist/
+.nb-gradle/
+
+# ============================================
+# 系统文件
+# ============================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.*.swp
+.*.swo
+
+# ============================================
+# 日志文件
+# ============================================
+*.log
+logs/
+log/
+*.logs
+
+# ============================================
+# 临时文件
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.dump
+*.cache
+
+# ============================================
+# 数据库相关
+# ============================================
+# 内存数据库文件
+*.db
+*.h2.db
+*.mv.db
+*.sqlite
+*.sqlite-journal
+
+# 数据库备份
+*.sql.bak
+
+# ============================================
+# Spring Boot 特定
+# ============================================
+# Spring Boot DevTools
+.springBeans
+
+# Actuator 堆转储
+heapdump.hprof
+
+# 热重启目录
+restart/
+
+# ============================================
+# 依赖和包文件
+# ============================================
+# Maven Wrapper JAR（注意：这个文件有时需要，有时不需要）
+# 如果您的 .mvn/wrapper/maven-wrapper.jar 是通过 mvnw 自动下载的，应该忽略
+.mvn/wrapper/maven-wrapper.jar
+
+# ============================================
+# 应用程序配置文件
+# ============================================
+# 忽略包含敏感信息的实际配置文件
+application.properties
+application.yml
+application-*.properties
+application-*.yml
+
+# 但可以提交示例配置文件
+!application.properties.example
+!application.yml.example
+
+# ============================================
+# 测试和覆盖率报告
+# ============================================
+test-output/
+reports/
+coverage/
+*.coverage
+*.lcov
+
+# JaCoCo
+.jacoco/
+jacoco.exec
+
+# ============================================
+# 上传目录和临时数据
+# ============================================
+uploads/
+temp/
+tmp/
+data/
+
+# ============================================
+# 项目特定规则
+# ============================================
+# 如果您使用 MyBatis Generator 或其他代码生成工具
+generated-sources/
+generated-test-sources/
+
+# ============================================
+# Git 相关
+# ============================================
+.git-rewrite/
+.git-blame-ignore-revs
